@@ -61,9 +61,7 @@ void Game::mainGame(int height, int width, const char* title)
             
             ball.ballsWindowCollision(width, height);
             ball.ballsCollision(this->ballVector);
-            ball.setBallPosition(
-                { ball.getBallSpeed().x, ball.getBallSpeed().y }
-            );
+            ball.move();
         }
 
         EndDrawing();

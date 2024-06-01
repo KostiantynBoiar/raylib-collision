@@ -3,6 +3,10 @@
 #include <vector>
 #include <cmath>
 #include <iostream>
+#include <chrono>
+
+#define u 0.2
+#define g 9.8
 
 class Ball
 {
@@ -12,6 +16,8 @@ private:
 	Vector2 ballPosition;
 	Vector2 ballSpeed;
 	float mass;
+	std::chrono::steady_clock::time_point previousTime;
+	std::chrono::steady_clock::time_point currentTime;
 
 public:
 	Ball(Color color, double radius, float mass, Vector2 ballPosition);
@@ -28,5 +34,7 @@ public:
 	void setBallSpeed(Vector2 ballSpeed);
 	void ballsCollision(std::vector<Ball>& balls);
 	bool ballsWindowCollision(int windowWidth, int windowHeight);
+	void move();
+	Vector2 energy_loose(float dx, float dy);
 };
 

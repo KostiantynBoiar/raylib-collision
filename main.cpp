@@ -1,6 +1,6 @@
 #include "Game.h"
-#define WINDOW_HEIGHT 600
-#define WINDOW_WIDTH 900
+#define WINDOW_HEIGHT 1080
+#define WINDOW_WIDTH 1920
 
 int main() {
     srand(time(0)); 
