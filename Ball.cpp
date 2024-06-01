@@ -1,11 +1,13 @@
 #include "Ball.h"
 
-Ball::Ball(Color color, double radius, Vector2 ballPosition, Vector2 ballSpeed)
+Ball::Ball(Color color, double radius, Vector2 ballPosition)
 {
     this->color = color;
     this->radius = radius;
     this->ballPosition = ballPosition;
     this->ballSpeed = ballSpeed;
+    ballSpeed.x = rand() % 5;
+    ballSpeed.y = rand() % 5;
 }
 
 Ball::Ball()
@@ -13,7 +15,8 @@ Ball::Ball()
     this->color = BLACK;
     this->radius = 10.f;
     this->ballPosition = { GetScreenWidth() / 2.0f, GetScreenHeight() / 2.0f };
-    this->ballSpeed = { 5.0f, 4.0f };
+    ballSpeed.x = rand() % 5;
+    ballSpeed.y = rand() % 5;
 }
 
 Color Ball::getColor()

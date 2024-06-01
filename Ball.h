@@ -12,7 +12,7 @@ private:
 	Vector2 ballSpeed;
 
 public:
-	Ball(Color color, double radius, Vector2 ballPosition, Vector2 ballSpeed);
+	Ball(Color color, double radius, Vector2 ballPosition);
 	Ball();
 	Color getColor();
 	void setColor(Color color);

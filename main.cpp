@@ -4,7 +4,10 @@
 
 int main() {
     srand(time(0)); 
-    Ball ball(BLACK, 10., { WINDOW_HEIGHT / 2, WINDOW_HEIGHT / 2 }, { 5.0, 4.0 });
+    Vector2 ballSpeed;
+    ballSpeed.x = rand() % 5;
+    ballSpeed.y = rand() % 5;
+    Ball ball(BLACK, 10., { WINDOW_HEIGHT / 2, WINDOW_HEIGHT / 2 });
     std::vector<Ball> ballVector;
     Game game(ballVector);
     game.addBall(ball);
