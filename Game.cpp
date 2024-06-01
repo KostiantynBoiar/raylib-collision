@@ -52,12 +52,12 @@ void Game::mainGame(int height, int width, const char* title)
            
             Color color{ red, green, blue, 255 };
 
-            Ball newBall(color, 10.f, 3, GetMousePosition());
+            Ball newBall(color, BALL_RADIUS, 3, GetMousePosition());
             std::cout << "Key has been pressed " << std::endl;
             addBall(newBall);
         }
         for (auto& ball : ballVector) {
-            DrawCircle(ball.getBallPosition().x, ball.getBallPosition().y, 10.f, ball.getColor());
+            DrawCircle(ball.getBallPosition().x, ball.getBallPosition().y, BALL_RADIUS, ball.getColor());
             
             ball.ballsWindowCollision(width, height);
             ball.ballsCollision(this->ballVector);

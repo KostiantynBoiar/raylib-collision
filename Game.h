@@ -2,6 +2,7 @@
 #include "Ball.h"
 #include <vector>
 #include <iostream>
+#define BALL_RADIUS 150.0
 
 class Game
 {
