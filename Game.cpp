@@ -52,7 +52,7 @@ void Game::mainGame(int height, int width, const char* title)
            
             Color color{ red, green, blue, 255 };
 
-            Ball newBall(color, 10.f, GetMousePosition());
+            Ball newBall(color, 10.f, 3, GetMousePosition());
             std::cout << "Key has been pressed " << std::endl;
             addBall(newBall);
         }

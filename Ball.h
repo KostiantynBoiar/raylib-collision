@@ -2,6 +2,7 @@
 #include "raylib.h"
 #include <vector>
 #include <cmath>
+#include <iostream>
 
 class Ball
 {
@@ -10,10 +11,13 @@ private:
 	double radius;
 	Vector2 ballPosition;
 	Vector2 ballSpeed;
+	float mass;
 
 public:
-	Ball(Color color, double radius, Vector2 ballPosition);
+	Ball(Color color, double radius, float mass, Vector2 ballPosition);
 	Ball();
+	float getMass();
+	void setMass(float mass);
 	Color getColor();
 	void setColor(Color color);
 	double getRadius();
